@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="650.0" xmlns="http://javafx.com/javafx/17.0.6" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.bank.app.Controllers.Client.TransactionsController">
+   <children>
+      <Label layoutX="213.0" layoutY="27.0" styleClass="darkLabel" stylesheets="@../../Style/css/client.css" text="All transactions" textAlignment="JUSTIFY" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="30.0">
+         <font>
+            <Font size="18.0" />
+         </font></Label>
+      <TableView fx:id="transactionsTableView" layoutX="30.0" layoutY="78.0" prefHeight="498.0" prefWidth="594.0" stylesheets="@../../Style/css/admin.css" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0">
+        <columns>
+          <TableColumn fx:id="dateTableColumn" editable="false" prefWidth="75.0" resizable="false" text="Date:" />
+          <TableColumn fx:id="senderTableColumn" editable="false" prefWidth="84.0" resizable="false" text="Sender:" />
+            <TableColumn fx:id="receiverTableColumn" editable="false" prefWidth="116.79997253417969" resizable="false" text="Receiver:" />
+            <TableColumn fx:id="transferTableColumn" editable="false" prefWidth="129.5999755859375" resizable="false" text="Transfer ammount:" />
+            <TableColumn fx:id="messageTableColumn" editable="false" minWidth="0.0" prefWidth="182.80000610351567" resizable="false" text="Message:" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

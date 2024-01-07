@@ -1,0 +1,53 @@
+.dark-label {
+    -fx-text-fill: #3e4772;
+}
+
+.light-label {
+    -fx-text-fill: #b7c6e7;
+}
+
+.dark-button {
+    -fx-background-color: #3e4772;
+    -fx-text-fill: #b7c6e7;
+}
+
+.dark-background {
+    -fx-background-color: #3e4772;
+}
+
+.light-icon {
+    -fx-fill:  #b7c6e7;
+}
+
+.text-field{
+    -fx-background-color: #b7c6e7;
+    -fx-text-inner-color: #3e4772;
+}
+
+.choice-box {
+    -fx-background-color:  #b7c6e7;
+    -fx-mark-color: #3e4772;
+    -fx-text-fill: #3e4772;
+
+}
+
+.choice-box > .label {
+    -fx-text-fill: #3e4772;
+}
+
+.choice-box .context-menu {
+    -fx-background-color:  #b7c6e7;
+}
+
+.choice-box .menu-item:focused {
+    -fx-background-color:  #b7c6e7;
+    -fx-text-fill: #3e4772;
+}
+
+.choice-box .menu-item:focused > .label {
+    -fx-text-fill: #3e4772;
+}
+
+
+
+

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="548.0" prefWidth="650.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/17.0.6" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.bank.app.Controllers.Admin.ShowClientsController">
+    <children>
+      <TableView fx:id="clientTableView" layoutX="31.0" layoutY="142.0" mouseTransparent="true" prefHeight="481.0" prefWidth="588.0" stylesheets="@../../Style/css/admin.css" AnchorPane.bottomAnchor="62.0" AnchorPane.leftAnchor="31.0" AnchorPane.rightAnchor="31.0">
+        <columns>
+          <TableColumn fx:id="firstNameTableColumn" editable="false" prefWidth="97.60000836849213" text="First Name" />
+            <TableColumn fx:id="lastNameTableColumn" editable="false" prefWidth="86.40003204345703" text="Last Name" />
+            <TableColumn fx:id="loginTableColumn" editable="false" prefWidth="99.19999694824219" text="Login" />
+            <TableColumn fx:id="passwordTableColumn" editable="false" prefWidth="116.0" text="Password" />
+            <TableColumn fx:id="registrationTableColumn" editable="false" prefWidth="92.0" text="Date" />
+            <TableColumn fx:id="balanceTableColumn" editable="false" prefWidth="94.39993286132812" text="Balance" />
+        </columns>
+      </TableView>
+      <TextField fx:id="searchTextField" layoutX="31.0" layoutY="95.0" prefHeight="25.0" prefWidth="150.0" AnchorPane.bottomAnchor="565.0" AnchorPane.leftAnchor="31.0" AnchorPane.topAnchor="90.0" />
+      <Button fx:id="searchButton" layoutX="198.0" layoutY="95.0" mnemonicParsing="false" onAction="#onSearchButton" prefHeight="25.0" prefWidth="50.0" stylesheets="@../../Style/css/admin.css" AnchorPane.bottomAnchor="565.0" AnchorPane.leftAnchor="200.0" AnchorPane.topAnchor="90.0">
+         <graphic>
+            <FontAwesomeIconView fill="#b7c6e7" glyphName="SEARCH" size="15" />
+         </graphic></Button>
+      <Label fx:id="searchByLoginLabel" layoutX="31.0" layoutY="70.0" text="Search by Login:" textFill="#3e4772" AnchorPane.leftAnchor="31.0" AnchorPane.topAnchor="70.0" />
+      <Button fx:id="deleteButton" layoutX="511.0" layoutY="96.0" mnemonicParsing="false" onAction="#onDeleteButton" prefHeight="25.0" prefWidth="50.0" stylesheets="@../../Style/css/admin.css" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="90.0">
+         <graphic>
+            <FontAwesomeIconView glyphName="TRASH" size="15">
+               <styleClass>
+                  <String fx:value="iconDarkFill" />
+                  <String fx:value="iconLightFill" />
+               </styleClass></FontAwesomeIconView>
+         </graphic>
+         <styleClass>
+            <String fx:value="deleteButton" />
+            <String fx:value="deleteButton" />
+         </styleClass></Button>
+      <TextField fx:id="deleteTextField" layoutX="341.0" layoutY="95.0" prefHeight="25.0" prefWidth="150.0" AnchorPane.leftAnchor="400.0" AnchorPane.rightAnchor="100.0" AnchorPane.topAnchor="90.0" />
+      <Label layoutX="341.0" layoutY="70.0" styleClass="darkLabel" stylesheets="@../../Style/css/admin.css" text="Delete by login:" AnchorPane.leftAnchor="400.0" AnchorPane.topAnchor="70.0" />
+      <Label fx:id="messageLabel" layoutX="341.0" layoutY="120.0" styleClass="darkLabel" stylesheets="@../../Style/css/admin.css" AnchorPane.leftAnchor="400.0" AnchorPane.topAnchor="115.0" />
+    </children>
+</AnchorPane>

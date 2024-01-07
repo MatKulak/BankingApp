@@ -1,0 +1,72 @@
+
+.text-field{
+    -fx-background-color: #b7c6e7;
+    -fx-text-inner-color: #3e4772;
+}
+#searchByLoginLabel{
+    -fx-fill: #3e4772;
+}
+.darkLabel {
+    -fx-text-fill: #3e4772;
+}
+
+.darkButton {
+    -fx-background-color: #3e4772;
+    -fx-text-fill: #b7c6e7;
+}
+
+#searchButton{
+    -fx-background-color:  #3e4772;
+}
+#depositMoneyCheckBox > .box{
+    -fx-background-color: #b7c6e7;
+}
+
+.errorLabel {
+    -fx-text-fill: #B22222;
+}
+
+.successLabel {
+    -fx-text-fill: #008000;
+}
+
+#depositMoneyCheckBox:selected > .box {
+    -fx-background-color: #3e4772;
+}
+
+#clientTableView {
+    -fx-background-color: #b7c6e7;
+}
+
+.table-view .column-header .label {
+    -fx-text-fill: #3e4772;
+    -fx-font-weight: bold;
+}
+
+.table-view .column-header {
+    -fx-background-color: #b7c6e7;
+    -fx-text-fill: #3e4772;
+}
+
+.table-view .column-header .resize-handle {
+    -fx-background-color: transparent;
+}
+
+.table-view .table-cell {
+    -fx-background-color: #b7c6e7;
+    -fx-text-fill: #3e4772;
+}
+
+.deleteButton{
+    -fx-background-color:  #B22222;
+}
+
+.iconDarkFill {
+    -fx-fill:  #3e4772;
+}
+
+.iconLightFill {
+    -fx-fill:  #b7c6e7;
+}
+
+

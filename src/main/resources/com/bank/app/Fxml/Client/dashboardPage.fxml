@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="650.0" xmlns="http://javafx.com/javafx/17.0.6" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.bank.app.Controllers.Client.DashboardController">
+   <children>
+      <Label fx:id="dateLabel" layoutX="566.0" layoutY="40.0" styleClass="darkLabel" stylesheets="@../../Style/css/client.css" text="2023-12-01" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="30.0">
+         <font>
+            <Font size="18.0" />
+         </font></Label>
+      <Label fx:id="hiLabel" layoutX="50.0" layoutY="40.0" styleClass="darkLabel" stylesheets="@../../Style/css/client.css" text="Hi, Mateusz! " AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="30.0">
+         <font>
+            <Font size="18.0" />
+         </font></Label>
+      <Label layoutX="30.0" layoutY="275.0" styleClass="darkLabel" stylesheets="@../../Style/css/client.css" text="Latest transactions:" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="275.0">
+         <font>
+            <Font size="18.0" />
+         </font></Label>
+      <Label layoutX="470.0" layoutY="275.0" styleClass="darkLabel" stylesheets="@../../Style/css/client.css" text="Transfer money:" AnchorPane.leftAnchor="470.0" AnchorPane.topAnchor="275.0">
+         <font>
+            <Font size="18.0" />
+         </font></Label>
+      <Label layoutX="497.0" layoutY="108.0" styleClass="darkLabel" stylesheets="@../../Style/css/client.css" text="Account Summary:" AnchorPane.leftAnchor="470.0">
+         <font>
+            <Font size="18.0" />
+         </font></Label>
+      <Label layoutX="464.0" layoutY="143.0" styleClass="darkLabel" stylesheets="@../../Style/css/client.css" text="Income:" AnchorPane.leftAnchor="470.0" />
+      <TextField fx:id="payeeAddressTextField" layoutX="470.0" layoutY="318.0" prefWidth="150.0" AnchorPane.leftAnchor="470.0" AnchorPane.rightAnchor="30.0" />
+      <TextField fx:id="amountTextField" layoutX="471.0" layoutY="380.0" maxWidth="150.0" AnchorPane.leftAnchor="470.0" AnchorPane.rightAnchor="30.0" />
+      <Label layoutX="468.0" layoutY="202.0" styleClass="darkLabel" stylesheets="@../../Style/css/client.css" text="Expenses:" AnchorPane.leftAnchor="470.0" />
+      <Label fx:id="incomeLabel" layoutX="467.0" layoutY="161.0" styleClass="incomeLabel" stylesheets="@../../Style/css/client.css" text="+ $5000" AnchorPane.leftAnchor="470.0">
+         <font>
+            <Font size="18.0" />
+         </font></Label>
+      <Label fx:id="expensesLabel" layoutX="469.0" layoutY="220.0" styleClass="expensesLabel" stylesheets="@../../Style/css/client.css" text="- $1000" AnchorPane.leftAnchor="470.0">
+         <font>
+            <Font size="18.0" />
+         </font></Label>
+      <Label layoutX="472.0" layoutY="301.0" styleClass="darkLabel" stylesheets="@../../Style/css/client.css" text="Payee address:" AnchorPane.leftAnchor="470.0" />
+      <Label layoutX="468.0" layoutY="363.0" styleClass="darkLabel" stylesheets="@../../Style/css/client.css" text="Transfer Amount:" AnchorPane.leftAnchor="470.0" />
+      <Label layoutX="469.0" layoutY="420.0" styleClass="darkLabel" stylesheets="@../../Style/css/client.css" text="Message: (optional)" AnchorPane.leftAnchor="470.0" />
+      <Button fx:id="sendMoneyButton" layoutX="470.0" layoutY="507.0" mnemonicParsing="false" onAction="#onSendMoneyButton" prefHeight="26.0" prefWidth="150.0" stylesheets="@../../Style/css/client.css" text="Button" AnchorPane.rightAnchor="30.0" />
+      <Label fx:id="messageLabel" layoutX="470.0" layoutY="541.0" styleClass="darkLabel" stylesheets="@../../Style/css/client.css" AnchorPane.bottomAnchor="41.39999999999998" AnchorPane.leftAnchor="470.0" />
+      <AnchorPane fx:id="rectangle" layoutX="52.0" layoutY="110.0" prefHeight="143.0" prefWidth="279.0" styleClass="creditCard" stylesheets="@../../Style/css/client.css" AnchorPane.leftAnchor="30.0">
+         <children>
+            <Label fx:id="accountBalanceLabel" layoutX="29.0" layoutY="22.0" styleClass="lightLabel" stylesheets="@../../Style/css/client.css" text="\$1000" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="20.0">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="creditCardLabel" layoutX="32.0" layoutY="72.0" styleClass="lightLabel" stylesheets="@../../Style/css/client.css" text="Credit Card" AnchorPane.leftAnchor="30.0" />
+            <Label fx:id="nameLabel" layoutX="22.0" layoutY="112.0" styleClass="lightLabel" stylesheets="@../../Style/css/client.css" text="Mateusz Kowalski" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="30.0" />
+            <FontAwesomeIconView glyphName="BANK" layoutX="237.0" layoutY="40.0" size="20" styleClass="iconLightFill" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="20.0" />
+         </children>
+      </AnchorPane>
+      <TableView fx:id="transactionsTableView" layoutX="34.0" layoutY="337.0" prefHeight="234.0" prefWidth="330.0" stylesheets="@../../Style/css/client.css" AnchorPane.bottomAnchor="31.0" AnchorPane.leftAnchor="30.0">
+        <columns>
+          <TableColumn fx:id="dateTableColumn" prefWidth="70.39996719360352" text="Date" />
+          <TableColumn fx:id="senderTableColumn" prefWidth="80.00006103515625" text="Sender" />
+            <TableColumn fx:id="receiverTableColumn" prefWidth="75.0" text="Payee" />
+            <TableColumn fx:id="transferTableColumn" prefWidth="100.00001831054686" text="Transfer Amount" />
+        </columns>
+      </TableView>
+      <TextArea fx:id="messageTextArea" layoutX="472.0" layoutY="438.0" prefHeight="62.0" prefWidth="150.0" styleClass="text-area" stylesheets="@../../Style/css/client.css" AnchorPane.leftAnchor="470.0" />
+   </children>
+</AnchorPane>
